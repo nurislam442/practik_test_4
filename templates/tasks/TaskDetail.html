@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>{{ tasks.title }}</title>
+</head>
+<body>
+    <div class="card" style="width: 30rem;"> 
+        
+    <h1>{{ tasks.title }}</h1>
+        <div class="card" style="width: 30rem;"> 
+            <h5>{{ tasks.description }}</h5>
+            <h4>{{tasks.category.name}}</h4>
+        </div>
+    <h5>
+    <a href="/tasks_view/">Назад</a>
+    </h5>
+    </div>
+</body>
+</html>
+</div>
+{% endblock %}

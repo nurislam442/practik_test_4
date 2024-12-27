@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="get", enctype="multipart/form-data">
+    {{form.as_p}}
+    <button type="submit">Search</button>
+</form>
+{% for i in tasks%}
+
+<div class="card" style="width: 18rem;">
+<div class="card-body">
+    <h5 class="card-title">title:{{ i.title }}</h5>
+    <p class="card-text">description:{{ i.description }}</p>
+    <a href="/TaskDetail/{{ i.id }}/" class="card-link">more details</a>
+  </div>
+</div>
+
+{% endfor %}
+
+
+{% endblock %}
